@@ -159,7 +159,7 @@ class _PedidoScreenState extends State<PedidoScreen> {
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 18,
-                                  color: Color.fromARGB(255, 0, 0, 0),
+                                  color: Colors.white
                                 ),
                               ),
                               icon: const Icon(Icons.arrow_drop_down,
@@ -182,7 +182,7 @@ class _PedidoScreenState extends State<PedidoScreen> {
                           marcaSelecionada ?? 'Marca',
                           style: const TextStyle(
                             fontWeight: FontWeight.bold,
-                            color: Color.fromARGB(255, 0, 0, 0),
+                            color: Colors.white,
                             fontSize: 18,
                           ),
                         ),
@@ -207,7 +207,7 @@ class _PedidoScreenState extends State<PedidoScreen> {
                               labelText: 'QUANTIDADE',
                               labelStyle: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                color: Color.fromARGB(255, 0, 0, 0),
+                                color: Colors.white
                               ),
                               filled: true,
                               fillColor: Color(0xFF9E58B8),

@@ -80,7 +80,7 @@ bool isLoading = true;
                           children: [
                             Text(
                               'MARCAS',
-                              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, fontFamily: 'RebeltonBold'),
+                              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, fontFamily: 'RebeltonBold', color: Colors.white,),
                             ),
                             SizedBox(height: 8),
                             Row(
@@ -88,14 +88,14 @@ bool isLoading = true;
                               children: [
                                 Column(
                                   children: [
-                                    Text('Gatitos'),
-                                    Text(marcas?['gatitos']?.toString() ?? '0', style: TextStyle(fontSize: 24)),
+                                    Text('Gatito', style: TextStyle(fontSize: 24, color: Colors.white,)),
+                                    Text(marcas?['gatitos']?.toString() ?? '0', style: TextStyle(fontSize: 24, color: Colors.white,)),
                                   ],
                                 ),
                                 Column(
                                   children: [
-                                    Text('Cachorritos'),
-                                    Text(marcas?['cachorritos']?.toString() ?? '0', style: TextStyle(fontSize: 24)),
+                                    Text('Cachorrito', style: TextStyle(fontSize: 24, color: Colors.white,)),
+                                    Text(marcas?['cachorritos']?.toString() ?? '0', style: TextStyle(fontSize: 24, color: Colors.white,)),
                                   ],
                                 ),
                               ],
@@ -115,7 +115,7 @@ bool isLoading = true;
                           children: [
                             Text(
                               'CATEGORIAS',
-                              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, fontFamily: 'RebeltonBold'),
+                              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, fontFamily: 'RebeltonBold', color: Colors.white),
                             ),
                             SizedBox(height: 8),
                             Column(
@@ -123,8 +123,8 @@ bool isLoading = true;
                                 return Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text(entry.key),
-                                    Text(entry.value.toString(), style: TextStyle(fontSize: 16)),
+                                    Text(entry.key,  style: TextStyle(fontSize: 16, color: Colors.white)),
+                                    Text(entry.value.toString(), style: TextStyle(fontSize: 16, color: Colors.white)),
                                   ],
                                 );
                               }).toList(),
@@ -144,12 +144,12 @@ bool isLoading = true;
                           children: [
                             Text(
                               'MAIOR OFERTA',
-                              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, fontFamily: 'RebeltonBold'),
+                              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, fontFamily: 'RebeltonBold', color: Colors.white,),
                             ),
                             SizedBox(height: 8),
                             Column(
                               children: maiorOferta!.map((produto) {
-                                return Text(produto, style: TextStyle(fontSize: 16));
+                                return Text(produto, style: TextStyle(fontSize: 16, color: Colors.white,));
                               }).toList(),
                             ),
                           ],

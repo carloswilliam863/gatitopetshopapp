@@ -24,15 +24,28 @@ class _RegisterScreenState extends State<RegisterScreen> {
 );
 
   void _register() async {
-    final name = _nameController.text;
-    final email = _emailController.text;
-    final password = _passwordController.text;
-    final passwordConfirmation = _passwordConfirmationController.text;
+    final name = _nameController.text.trim();
+    final email = _emailController.text.trim();
+    final password = _passwordController.text.trim();
+    final passwordConfirmation = _passwordConfirmationController.text.trim();
 
+    // Verificar se todos os campos estão preenchidos
+    if (name.isEmpty ||
+        email.isEmpty ||
+        password.isEmpty ||
+        passwordConfirmation.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text('Por favor, preencha todos os campos!'),
+        backgroundColor: Colors.red,
+      ));
+      return;
+    }
 
+    // Verificar se as senhas coincidem
     if (password != passwordConfirmation) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
         content: Text('As senhas não coincidem'),
+        backgroundColor: Colors.red,
       ));
       return;
     }

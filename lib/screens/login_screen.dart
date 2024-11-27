@@ -23,8 +23,17 @@ class _LoginScreenState extends State<LoginScreen> {
 
  
   void _login() async {
-    final email = _emailController.text;
-    final password = _passwordController.text;
+    final email = _emailController.text.trim();
+    final password = _passwordController.text.trim();
+
+    if (email.isEmpty || password.isEmpty) {
+      // Exibir mensagem de erro se algum campo estiver vazio
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text('Por favor, preencha todos os campos!'),
+        backgroundColor: Colors.red,
+      ));
+      return;
+    }
 
     try {
       await authService.login(email, password);
@@ -33,9 +42,9 @@ class _LoginScreenState extends State<LoginScreen> {
     } catch (e) {
       // Tratar erro de login (exibir mensagem, etc.)
       print('Erro ao fazer login: $e');
-      // Você pode exibir uma mensagem de erro usando um Snackbar, por exemplo.
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        content: Text('Erro ao fazer login: $e'),
+        content: Text('Senha Incorreta'),
+        backgroundColor: Colors.red,
       ));
     }
   }

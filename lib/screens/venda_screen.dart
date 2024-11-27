@@ -142,7 +142,7 @@ class _VendaScreenState extends State<VendaScreen> {
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
-                        color: const Color.fromARGB(255, 7, 5, 5),
+                        color: Colors.white
                       ),
                     ),
                     icon: Icon(Icons.arrow_drop_down, color: Colors.white),
@@ -183,7 +183,7 @@ class _VendaScreenState extends State<VendaScreen> {
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
-                          color: const Color.fromARGB(255, 0, 0, 0),
+                          color: Colors.white
                         ),
                       ),
                       icon: Icon(Icons.arrow_drop_down, color: Colors.white),
@@ -199,7 +199,7 @@ class _VendaScreenState extends State<VendaScreen> {
                       labelText: 'QUANTIDADE',
                       labelStyle: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: const Color.fromARGB(255, 7, 4, 4),
+                        color: Colors.white
                       ),
                       filled: true,
                       fillColor: Color(0xFF9E58B8),

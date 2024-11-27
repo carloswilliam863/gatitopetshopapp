@@ -97,19 +97,19 @@ class _ProductScreenState extends State<ProductScreen> {
                       children: [
                         Text(
                           product.nome ?? 'Nome indisponível',
-                          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 0, 0, 0)),
+                          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 255, 255, 255)),
                         ),
                         Text(
                           'Categoria: ${product.categoria ?? 'Indisponível'}',
-                          style: const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                          style: const TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
                         ),
                         Text(
                           'Marca: ${product.marca ?? 'Indisponível'}',
-                          style: const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                          style: const TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
                         ),
                         Text(
                           'Preço: R\$ ${product.preco?.toStringAsFixed(2).replaceAll('.', ',') ?? 'Indisponível'}',
-                          style: const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                          style: const TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
                         ),
                       ],
                     ),
@@ -118,7 +118,7 @@ class _ProductScreenState extends State<ProductScreen> {
                     alignment: Alignment.bottomRight,
                     child: Text(
                       product.quantidadeEmEstoque.toString() ?? 'Indisponível',
-                      style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 0, 0, 0)),
+                      style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 255, 255, 255)),
                     ),
                   ),
                 ],
